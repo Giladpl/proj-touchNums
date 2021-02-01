@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Touch the numbers game!</title>
+</head>
+
+<body onload="init(16)">
+    <h1>Touch the numbers game!</h1>
+    <div class="buttons-container">
+        <button onclick="init(16)">Easy 16</button>
+        <button onclick="init(25)">Hard 25</button>
+        <button onclick="init(36)">Extreme 36</button>
+    </div>
+
+    <table border="1" cellpadding="10">
+        <tbody class="board"></tbody>
+    </table>
+
+    <div class="timer">Let's see how fast you can go:</div>
+    <div class="reset-container">
+        <button onclick="resetGame()" class="btn-reset">Reset</button>
+    </div>
+
+    <div class="modal hidden">
+        <h1>Condrats! You've finished the game. 🎉</h1>
+        <p>
+            Would you like to play another round? 
+            <button onclick="resetGame()" class="start-again">Start Again</button>
+        </p>
+    </div>
+    <div class="overlay hidden"></div>
+    <script src="js/util.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
